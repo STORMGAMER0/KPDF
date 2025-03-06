@@ -9,23 +9,34 @@
   </head>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-    let video = document.getElementById("bg-video");
+        var video = document.getElementById("bg-video");
+        var videoSource = document.getElementById("video-source");
 
-    // Mobile video source
-    let mobileVideoSrc = "./WhatsApp Video 2025-03-06 at 15.11.35_6aaa535c.mp4"; // Change to your mobile video file
+        // Check if the screen width is below 768px (mobile)
+        if (window.innerWidth <= 768) {
+          videoSource.src = "./WhatsApp Video 2025-03-06 at 15.11.35_6aaa535c.mp4"; // Replace with your mobile video
+          video.load(); // Reload the video to apply the change
+        }
+      });
+//     document.addEventListener("DOMContentLoaded", function () {
+//     let video = document.getElementById("bg-video");
 
-    // Check if the screen width is less than 768px (mobile)
-    if (window.innerWidth <= 768) {
-        video.innerHTML = `<source src="${mobileVideoSrc}" type="video/mp4">`;
-        video.load(); // Reload video with the new source
-    }
-});
+//     // Mobile video source
+//     let mobileVideoSrc = "./WhatsApp Video 2025-03-06 at 15.11.35_6aaa535c.mp4"; // Change to your mobile video file
+
+//     // Check if the screen width is less than 768px (mobile)
+//     if (window.innerWidth <= 768) {
+//         video.innerHTML = `<source src="${mobileVideoSrc}" type="video/mp4">`;
+//         video.load(); // Reload video with the new source
+//     }
+// });
 
   </script>
   <body id="body-html">
     <video autoplay muted loop id="bg-video">
       <source
         src="./vlc-record-2025-03-04-12h03m10s-videoplayback.mp4-.mp4"
+        id="video-source"
         type="video/mp4"
       />
     </video>
