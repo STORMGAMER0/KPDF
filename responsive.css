@@ -1,6 +1,7 @@
 /* Apply styles only for screens smaller than 768px */
 @media screen and (max-width: 768px) {
   
+  
   /* Adjust main body */
   #main-body {
     flex-direction: column;
@@ -31,7 +32,7 @@
   }
 
   /* Hamburger menu styles */
-  .menu-toggle {
+  #menu-toggle {
     display: block;
     background: none;
     border: none;

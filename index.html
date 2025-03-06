@@ -5,14 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>IT/Media</title>
     <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./responsiveindex.css">
   </head>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+    let video = document.getElementById("bg-video");
+
+    // Mobile video source
+    let mobileVideoSrc = "./WhatsApp Video 2025-03-06 at 15.11.35_6aaa535c.mp4"; // Change to your mobile video file
+
+    // Check if the screen width is less than 768px (mobile)
+    if (window.innerWidth <= 768) {
+        video.innerHTML = `<source src="${mobileVideoSrc}" type="video/mp4">`;
+        video.load(); // Reload video with the new source
+    }
+});
+
+  </script>
   <body id="body-html">
     <video autoplay muted loop id="bg-video">
       <source
         src="./vlc-record-2025-03-04-12h03m10s-videoplayback.mp4-.mp4"
         type="video/mp4"
       />
-      Your browser does not support the video tag.
     </video>
 
     <div id="welcome-container">
