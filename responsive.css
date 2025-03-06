@@ -1,7 +1,5 @@
 /* Apply styles only for screens smaller than 768px */
 @media screen and (max-width: 768px) {
-  
-  
   /* Adjust main body */
   #main-body {
     flex-direction: column;
@@ -39,9 +37,12 @@
     font-size: 2em;
     cursor: pointer;
     position: absolute;
-    right: 20px;
+    bottom: 55px;
+    left: 20px; /* Moves it to the left */
     top: 15px;
-    color: #f8d712; /* Gold color matching your scheme */
+    color: white; /* Gold color matching your scheme */
+  
+    
   }
 
   /* Hide nav by default and show when active */
@@ -85,9 +86,9 @@
     padding: 15px;
   }
 
-  h1, h2 {
+  h1,
+  h2 {
     font-size: 1.5em;
     text-align: center;
   }
-
 }
