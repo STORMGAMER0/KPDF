@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./responsivedonation.css">
+  </head>
+  <body id="donation-body">
+    <video autoplay muted loop id="bg-video">
+      <source src="./mydesign.mp4" type="video/mp4" />
+    </video>
+    <div id="form-container">
+      <div class="form-box food">
+        <div id="photo">
+          <img src="./Food_Donation-512.webp" alt="" />
+          <p>Show your support by donating your excesses</p>
+        </div>
+        <form action="">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Your name.."
+            class="input"
+          />
+          <label for="Email">Email</label>
+          <input
+            type="text"
+            id="Email"
+            name="Email"
+            placeholder="Your Email.."
+            class="input"
+          />
+          <label for="country">Country </label>
+          <select id="country" class="input">
+            <option value="">Choose a country</option>
+            <option value="Algeria">Algeria</option>
+            <option value="Angola">Angola</option>
+            <option value="Benin">Benin</option>
+            <option value="Botswana">Botswana</option>
+            <option value="Burkina Faso">Burkina Faso</option>
+            <option value="Burundi">Burundi</option>
+            <option value="Cabo Verde">Cabo Verde</option>
+            <option value="Cameroon">Cameroon</option>
+            <option value="Central African Republic">
+              Central African Republic
+            </option>
+            <option value="Chad">Chad</option>
+            <option value="Comoros">Comoros</option>
+            <option value="Democratic Republic of the Congo">
+              Democratic Republic of the Congo
+            </option>
+            <option value="Djibouti">Djibouti</option>
+            <option value="Egypt">Egypt</option>
+            <option value="Equatorial Guinea">Equatorial Guinea</option>
+            <option value="Eritrea">Eritrea</option>
+            <option value="Eswatini">Eswatini</option>
+            <option value="Ethiopia">Ethiopia</option>
+            <option value="Gabon">Gabon</option>
+            <option value="Gambia">Gambia</option>
+            <option value="Ghana">Ghana</option>
+            <option value="Guinea">Guinea</option>
+            <option value="Guinea-Bissau">Guinea-Bissau</option>
+            <option value="Ivory Coast">Ivory Coast</option>
+            <option value="Kenya">Kenya</option>
+            <option value="Lesotho">Lesotho</option>
+            <option value="Liberia">Liberia</option>
+            <option value="Libya">Libya</option>
+            <option value="Madagascar">Madagascar</option>
+            <option value="Malawi">Malawi</option>
+            <option value="Mali">Mali</option>
+            <option value="Mauritania">Mauritania</option>
+            <option value="Mauritius">Mauritius</option>
+            <option value="Morocco">Morocco</option>
+            <option value="Mozambique">Mozambique</option>
+            <option value="Namibia">Namibia</option>
+            <option value="Niger">Niger</option>
+            <option value="Nigeria">Nigeria</option>
+            <option value="Rwanda">Rwanda</option>
+            <option value="São Tomé and Príncipe">São Tomé and Príncipe</option>
+            <option value="Senegal">Senegal</option>
+            <option value="Seychelles">Seychelles</option>
+            <option value="SierraLeone">Sierra Leone</option>
+            <option value="Somalia">Somalia</option>
+            <option value="SouthAfrica">South Africa</option>
+            <option value="SouthSudan">South Sudan</option>
+            <option value="Sudan">Sudan</option>
+            <option value="Tanzania">Tanzania</option>
+            <option value="Togo">Togo</option>
+            <option value="Tunisia">Tunisia</option>
+            <option value="Uganda">Uganda</option>
+            <option value="Zambia">Zambia</option>
+            <option value="Zimbabwe">Zimbabwe</option>
+          </select>
+          <label for="food-bank">Select a Food Bank</label>
+          <select id="food-bank" class="input">
+              <option value="">Select a country first</option>
+          </select>
+          
+          <button>Donate</button>
+          <p class="button-p">want to donate money instead? </p><button>click here</button>
+        </form>
+      </div>
+      <br /><br /><br />
+      <div class="form-box money">
+        <div id="photo">
+          <img src="./photo_6026041942279831553_y.jpg" alt="" />
+          <p>
+            <strong
+              >You can show your support through monetary donations as well!</strong
+            >
+          </p>
+        </div>
+        <form action="">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Your name.."
+            class="input"
+          />
+          <label for="Email">Email</label>
+          <input
+            type="text"
+            id="Email"
+            name="Email"
+            placeholder="Your Email.."
+            class="input"
+          />
+          <label for="card-number">Credit Card</label>
+          <div id="card-info">
+            <input
+              type="text"
+              id="card-number"
+              name="card-number"
+              placeholder="Card Number"
+              maxlength="16"
+              required
+            />
+            <input
+              type="text"
+              id="expiry"
+              name="expiry"
+              placeholder="MM / YY"
+              maxlength="5"
+              required
+            />
+            <input
+              type="text"
+              id="cvc"
+              name="cvc"
+              placeholder="CVC"
+              maxlength="3"
+              required
+            />
+          </div>
+          <button id="button-two">Donate</button>
+          <p class="button-p">want to donate food instead? </p><button>click here</button>
+        </form>
+      </div>
+    </div>
+    <script src="./donation.js"></script>
+  </body>
+</html>

@@ -7,3 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
   
+  console.log(document.head)
+  console.log(document.body)
+document.body.style.backgroundColor
+console.log(document.getElementById("back-to-top"))

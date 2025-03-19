@@ -1,0 +1,21 @@
+@media (max-width: 480px) {
+  #form-container {
+    width: 95%;
+  }
+
+  .form-box {
+    padding: 10px;
+  }
+
+  #photo img {
+    max-width: 50%;
+  }
+
+  .form-box form {
+    padding: 15px;
+  }
+
+  button {
+    font-size: 0.9rem;
+  }
+}
