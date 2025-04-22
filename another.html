@@ -1,0 +1,172 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./oya.css">
+</head>
+<body>
+    
+    <div class="slideshow-container">
+        <div class="slideshow">
+      
+        </div>
+      </div>
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+  const slideshow = document.querySelector('.slideshow');
+  const totalSlides = 10; // Now 10 images (28-37)
+  const startingNumber = 28; // First image number
+  let currentIndex = 0;
+  let slideInterval;
+  const slideDuration = 3000; // 3 seconds per slide
+  
+  // Generate slides (28.jpg to 37.jpg)
+  for (let i = 0; i < totalSlides; i++) {
+    const slide = document.createElement('div');
+    slide.className = 'slide';
+    slide.innerHTML = `<img src="./${startingNumber + i}.jpg" alt="Slide ${startingNumber + i}">`;
+    slideshow.appendChild(slide);
+  }
+  
+  const slides = document.querySelectorAll('.slide');
+  
+  function updateSlides() {
+    slides.forEach((slide, index) => {
+      slide.classList.remove('active', 'next', 'prev', 'hidden');
+      
+      if (index === currentIndex) {
+        slide.classList.add('active');
+      } 
+      else if (index === (currentIndex + 1) % totalSlides) {
+        slide.classList.add('next');
+      }
+      else if (index === (currentIndex - 1 + totalSlides) % totalSlides) {
+        slide.classList.add('prev');
+      }
+      else {
+        slide.classList.add('hidden');
+      }
+    });
+    
+    updateIndicators();
+  }
+  
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % totalSlides;
+    updateSlides();
+  }
+  
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+    updateSlides();
+  }
+  
+  function startSlideshow() {
+    updateSlides();
+    slideInterval = setInterval(nextSlide, slideDuration);
+  }
+  
+
+  const slideshowContainer = document.querySelector('.slideshow-container');
+  slideshowContainer.addEventListener('mouseenter', () => {
+    clearInterval(slideInterval);
+  });
+  
+  slideshowContainer.addEventListener('mouseleave', () => {
+    slideInterval = setInterval(nextSlide, slideDuration);
+  });
+  
+
+  const nextBtn = document.createElement('button');
+  nextBtn.innerHTML = '&rarr;';
+  nextBtn.classList.add('slide-btn', 'next-btn');
+  nextBtn.addEventListener('click', nextSlide);
+  
+  const prevBtn = document.createElement('button');
+  prevBtn.innerHTML = '&larr;';
+  prevBtn.classList.add('slide-btn', 'prev-btn');
+  prevBtn.addEventListener('click', prevSlide);
+  
+  slideshowContainer.appendChild(prevBtn);
+  slideshowContainer.appendChild(nextBtn);
+
+  const indicatorsContainer = document.createElement('div');
+  indicatorsContainer.className = 'indicators';
+  
+  for (let i = 0; i < totalSlides; i++) {
+    const indicator = document.createElement('div');
+    indicator.className = 'indicator';
+    indicator.dataset.index = i;
+    indicator.addEventListener('click', () => {
+      currentIndex = i;
+      updateSlides();
+    });
+    indicatorsContainer.appendChild(indicator);
+  }
+  
+  slideshowContainer.appendChild(indicatorsContainer);
+  
+  function updateIndicators() {
+    const indicators = document.querySelectorAll('.indicator');
+    indicators.forEach((indicator, index) => {
+      indicator.classList.remove('active');
+      if (index === currentIndex) {
+        indicator.classList.add('active');
+      }
+    });
+  }
+  
+
+  startSlideshow();
+});  </script>
+</body>
+</html>
+ -->
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HubSpot Clone</title>
+<link rel="stylesheet" href="./oya.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-links">
+            <a href="#">Products</a>
+            <a href="#">Solutions</a>
+            <a href="#">Pricing</a>
+            <a href="#">Resources</a>
+        </div>
+        <a href="#" class="cta-button">Start free or get a demo</a>
+    </nav>
+    
+    <!-- Mission Section with Image -->
+    <section class="split-section mission-section">
+        <div class="split-content">
+            <h1>Our Mission: Helping Millions of Organizations Grow Better</h1>
+            <p>We believe not just in growing bigger, but in growing better. And growing better means aligning the success of your own business with the success of your customers. Win-win!</p>
+        </div>
+        <div class="split-image">
+            <!-- Replace with actual image -->
+            <img src="https://via.placeholder.com/500x350?text=Mission+Image" alt="Team working together">
+        </div>
+    </section>
+    
+    <!-- Story Section with Image -->
+    <section class="split-section">
+        <div class="split-image">
+            <!-- Replace with actual image -->
+            <img src="https://via.placeholder.com/500x350?text=Our+Story+Image" alt="HubSpot founders">
+        </div>
+        <div class="split-content">
+            <h2>Our Story</h2>
+            <p>In 2004, fellow MIT graduate students Brian Halligan and Dharmesh Shah noticed a major shift in the way people shop and purchase products. Buyers didn't want to be interrupted by ads, they wanted helpful information. In 2006, they founded HubSpot to help companies use that shift to grow better with inbound marketing.</p>
+            <p>Along the way, HubSpot expanded beyond marketing into a crafted, not-cobbled suite of products that create the frictionless customer experience that buyers expect today. Expertly led by CEO Yamini Rangan, HubSpot uses its customer platform built on an AI-powered Smart CRM to help millions of scaling organizations grow better.</p>
+        </div>
+    </section>
+</body>
+</html>

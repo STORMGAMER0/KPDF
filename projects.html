@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./projects.css">
+</head>
+<body>
+    <nav>
+        <img src="./kpdf logo.jpeg" class="logo" alt="Logo" />
+    
+        <!-- Hamburger icon (for small screens) -->
+        <div class="hamburger" id="hamburger">&#9776;</div>
+    
+        <div class="nav-links" id="navLinks">
+            <a href="/index.html">Home</a>
+            <a href="./about.html">About</a>
+            <a href="#">News</a>
+            <a href="/contact.html">Contact Us</a>
+        </div>
+    
+        <div class="action-group">
+            <a href="#" class="action-btn">Get Involved</a>
+            <span class="separator">|</span>
+            <a href="#" class="action-btn">Support Us</a>
+            <span class="separator">|</span>
+            <a href="#" class="action-btn">Learn More</a>
+        </div>
+    </nav>
+    
+    
+    <!-- Mission Section with Image -->
+    <section class="split-section mission-section">
+        <div class="split-content">
+            <h1>Our Projects</h1>
+            <h2>1. Kings Patriots Mentorship Program for Africa (KPMP4AFRICA)</h2>
+            <p>An annual leadership and entrepreneurship training program for young African leaders, focusing on Politics, Business, and Tech Innovation.</p>
+        </div>
+        <div class="split-image">
+            <!-- Replace with actual image -->
+            <img src="./38.jpg" alt="Team working together">
+        </div>
+    </section>
+    
+    <!-- Story Section with Image -->
+    <section class="split-section">
+        <div class="split-image">
+            <!-- Replace with actual image -->
+            <img src="./26.jpg" alt="HubSpot founders">
+        </div>
+        <div class="split-content">
+            <h2>2. Youth Capacity Building & Skill Development</h2>
+            <p>Training sessions and workshops on entrepreneurship, career development, and leadership. </p>
+        </div>
+    </section>
+    
+
+    <section class="split-section mission-section">
+        <div class="split-content">
+            <h2>3. Africa Leadership & Innovation Bootcamp</h2>
+            <p>A platform for emerging leaders to learn from industry experts and global mentors.  </p>
+        </div>
+        <div class="split-image">
+            <!-- Replace with actual image -->
+            <img src="/39.jpg" id="specific" alt="Team working together">
+        </div>
+    </section>
+
+    <section class="split-section">
+        <div class="split-image">
+            <!-- Replace with actual image -->
+            <img src="./35.jpg" alt="HubSpot founders">
+        </div>
+        <div class="split-content">
+            <h2>4. Community Development & Civic Engagement</h2>
+            <p>Volunteer-driven projects focused on grassroots empowerment, education, and governance.   </p>
+        </div>
+    </section>
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+    
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+        });
+    </script>
+    
+</body>
+</html>

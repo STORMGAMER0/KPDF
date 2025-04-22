@@ -1,0 +1,252 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    color: #33475b;
+    line-height: 1.6;
+    background-color: rgba(61,36,151,255);
+    ;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    background-color: rgba(61,36,151,255);
+   
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 15px;
+}
+nav img{
+    width: 150px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 10px;
+} 
+
+.cta-button {
+    background-color: #ff5a5f;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* Split Layout Sections */
+.split-section {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 40px;
+    background-color: rgba(248,244,239,255);
+    border-radius: 10px;
+}
+
+.split-content {
+    flex: 1;
+    padding: 0 40px;
+}
+
+.split-image {
+    flex: 1;
+    text-align: center;
+}
+
+.split-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.split-image p {
+   font-style: italic;
+   font-size: 0.8rem
+}
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #2d3d50;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #2d3d50;
+}
+
+p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #5a6d87;
+}
+
+.mission-section {
+    background-color: #f5f7fa;
+}
+#specific{
+    height: 400px;
+}
+.action-btn {
+    color: rgba(99,53,96,255);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 8px 15px;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+    background-color: rgba(236,193,37,255);
+}
+
+.action-btn:hover {
+    color: #f1f1f1;
+    text-decoration: underline;
+}
+
+.separator {
+    color: white;
+    font-size: 20px;
+    margin: 0 5px;
+}
+
+/* Hamburger styles */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    nav {
+        flex-wrap: wrap;
+        padding: 10px 20px;
+    }
+
+    .logo {
+        width: 100px;
+        height: 70px;
+    }
+
+    .hamburger {
+        display: block;
+        margin-left: auto;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        display: none;
+        width: 100%;
+        background-color: rgba(61,36,151,255);
+        margin-top: 10px;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links a {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .action-group {
+        flex-direction: column;
+        gap: 5px;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .split-section {
+        flex-direction: row; /* keep side-by-side layout */
+        flex-wrap: wrap;
+        padding: 30px 20px;
+    }
+
+    .split-content, .split-image {
+        flex: 1 1 50%;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 0.95rem;
+    }
+
+    .split-image img {
+        width: 100%;
+        max-height: 200px;
+        object-fit: cover;
+    }
+
+    #specific {
+        height: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .action-group {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 999;
+        background-color: rgba(248,244,239,255);
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 10px 5px;
+        box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+        gap: 0;
+        flex-direction: row;
+    }
+
+    .action-btn {
+        flex: 1;
+        text-align: center;
+        font-size: 14px;
+        padding: 10px;
+        border-radius: 0;
+        margin: 0;
+        background-color: rgba(236,193,37,255);
+        color: rgba(99,53,96,255);
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .separator {
+        display: none;
+    }
+
+    body {
+        padding-bottom: 60px; /* space for sticky footer */
+    }
+}

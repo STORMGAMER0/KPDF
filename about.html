@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+<link rel="stylesheet" href="./about.css">
+</head>
+<body>
+    <nav>
+        <img src="./kpdf logo.jpeg" class="logo" alt="Logo" />
+    
+        <!-- Hamburger icon (for small screens) -->
+        <div class="hamburger" id="hamburger">&#9776;</div>
+    
+        <div class="nav-links" id="navLinks">
+            <a href="/index.html">Home</a>
+            <a href="./projects.html">Projects</a>
+            <a href="#">News</a>
+            <a href="/contact.html">Contact Us</a>
+        </div>
+    
+        <div class="action-group">
+            <a href="#" class="action-btn">Get Involved</a>
+            <span class="separator">|</span>
+            <a href="#" class="action-btn">Support Us</a>
+            <span class="separator">|</span>
+            <a href="#" class="action-btn">Learn More</a>
+        </div>
+    </nav>
+    
+    
+    <!-- Mission Section with Image -->
+    <section class="split-section mission-section">
+        <div class="split-content">
+            <h1>Who We Are</h1>
+            <p>Kings Patriots Development Foundation (KPDF) is a Pan-African nonprofit organization committed to raising accountable and responsible leaders across Africa. Through youth empowerment programs, capacity-building initiatives, and leadership development, we equip young people with the skills, knowledge, and ethical foundation to transform their communities and the continent.</p>
+        </div>
+        <div class="split-image">
+            <!-- Replace with actual image -->
+            <img src="./3.jpg" alt="Team working together">
+            <p>KPDF Representation at the World Youth Development Forum, China</p>
+        </div>
+    </section>
+    
+    <!-- Story Section with Image -->
+    <section class="split-section">
+        <div class="split-image">
+            <!-- Replace with actual image -->
+            <img src="./29.jpg" alt="HubSpot founders">
+        </div>
+        <div class="split-content">
+            <h2>Our Mission</h2>
+            <p>To empower African youth with the leadership, entrepreneurship, and civic development skills needed to drive sustainable change and innovation across the continent.  </p>
+        </div>
+    </section>
+    
+
+    <section class="split-section mission-section">
+        <div class="split-content">
+            <h1>Our Vision</h1>
+            <p>To raise a new generation of accountable and responsible leaders in Africa who will drive positive transformation and socio-economic growth.</p>
+        </div>
+        <div class="split-image">
+            <!-- Replace with actual image -->
+            <img src="/34.jpg" id="specific" alt="Team working together">
+        </div>
+    </section>
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+    
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+        });
+    </script>
+    
+</body>
+</html>

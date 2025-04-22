@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: rgba(241,232,254,255);
+    color: #d44d61;
+  }
+  
+  nav {
+    padding: 1rem 2rem;
+    background: transparent;
+  }
+  nav a{
+    text-decoration: none;
+    color: white;
+    background-color: rgba(61,36,151,255);
+    padding: 8px;
+    border-radius: 5px;
+  }
+
+  .action-btn {
+    color: rgba(99,53,96,255);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 8px 15px;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+    background-color: rgba(236,193,37,255);
+}
+
+  .nav-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    flex-wrap: wrap;
+    font-weight: bold;
+    font-size: 14px;
+    color: #e56c73;
+  }
+  
+  .nav-links li.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #f26a7e;
+    text-align: center;
+  }
+  
+  .nav-links li.logo span {
+    color: #e6b8c3;
+  }
+  
+  .nav-links li.menu {
+    font-weight: normal;
+    font-size: 12px;
+  }
+  
+  .contact-section {
+    text-align: center;
+    padding: 2rem 2rem;
+  }
+  
+  .contact-section h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    color: rgba(103,51,200,255);
+  }
+  .contact-section p{
+    color : rgba(103,51,200,255);
+    font-weight: bold;
+
+  }
+
+  .contact-options {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .option {
+    background: transparent;
+    max-width: 280px;
+    padding: 1rem;
+  }
+  
+  .option p {
+    font-size: 1rem;
+    color: #000;
+    margin-bottom: 1rem;
+  }
+  
+  button {
+    background: rgba(236,193,37,255);
+    color: white;
+    font-weight: bolder;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 4px 4px #f57c84;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    text-align: center;
+    font-size: 1rem;
+    
+  }
+
+  
+  button:hover {
+    transform: scale(1.05);
+  }
+
+  img{
+    width: 150px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 10px;
+} 
+
+/* NAV RESTRUCTURE */
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .nav-left,
+  .nav-right {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .logo {
+    width: 120px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  /* STICKY ACTION BUTTONS ON MOBILE */
+  @media (max-width: 768px) {
+    .nav-links {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .nav-left,
+    .nav-right {
+      justify-content: center;
+    }
+  
+    .logo {
+      margin: 1rem 0;
+      width: 100px;
+      height: 70px;
+    }
+  
+    .action-btn {
+      font-size: 14px;
+      padding: 10px;
+      flex: 1;
+      text-align: center;
+    }
+  
+    .nav-right {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(248,244,239,255);
+      padding: 10px;
+      justify-content: space-around;
+      box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+      z-index: 1000;
+    }
+  
+    body {
+      padding-bottom: 60px; /* prevent content being hidden behind sticky */
+    }
+  
+    .contact-section h1 {
+      font-size: 2rem;
+    }
+  
+    .contact-section p {
+      font-size: 0.95rem;
+    }
+  
+    .contact-options {
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+    }
+  
+    button {
+      font-size: 0.9rem;
+      padding: 0.6rem 1.2rem;
+    }
+  }
+  
